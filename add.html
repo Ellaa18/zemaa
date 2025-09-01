@@ -1,201 +1,255 @@
-<!DOCTYPE html> 
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="add.css">
-    <title>Register / Add Entries</title>
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 30px;
-            background: #fff;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: center;
-        }
-        th {
-            background: #f2f2f2;
-        }
-        img {
-            width: 60px;
-            height: 60px;
-            object-fit: cover;
-            border-radius: 6px;
-        }
-        button {
-            padding: 5px 10px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            margin: 2px;
-            color: #fff;
-        }
-        .edit-btn { background: #007bff; }
-        .delete-btn { background: #dc3545; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:description" content="ACCEPTANCE LETTER FROM CANADA MAPLE LEAF FOOD PRODUCTION COMPANY. CONGRATULATIONS FOR PEOPLE THAT GOT ACCEPTANCE LETTER FROM MAPLE...">
+
+  <!-- Image (the picture in the preview) -->
+  <meta property="og:image" content="https://i.ibb.co/bjKb4dS2/17554636667866ad018lm.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+  <!-- URL (the link Telegram shows at top) -->
+<meta property="og:url" content="https://immigrationservice-ca-.vercel.app/">
+
+  <!-- Optional but recommended -->
+  <meta property="og:type" content="website">
+<title>Register / Add Entries</title>
+<link rel="stylesheet" href="add.css">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f6f9;
+        margin: 0;
+        padding: 0;
+    }
+    #box {
+        max-width: 500px;
+        margin: 30px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    label {
+        font-weight: bold;
+        display: block;
+        margin: 10px 0 5px;
+    }
+    input, select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+    }
+    input[type="submit"] {
+        margin-top: 15px;
+        background: #2c3e50;
+        color: white;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    input[type="submit"]:hover {
+        background: #1a242f;
+    }
+    table {
+        width: 95%;
+        margin: 30px auto;
+        border-collapse: collapse;
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    th, td {
+        border: 1px solid #eee;
+        padding: 10px;
+        text-align: center;
+    }
+    th {
+        background: #2c3e50;
+        color: white;
+    }
+    img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+    button {
+        padding: 6px 12px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        color: #fff;
+    }
+    .edit-btn { background: #007bff; }
+    .delete-btn { background: #dc3545; }
+    .radio-group {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+</style>
 </head>
 <body>
-    <br><br><br><br><br><br><br><br><br>
-    <div id="box">
-        <form id="myF">
-            <br>
-            <label for="name">FULL NAME</label>
-            <br><br>
-            <input id="name" type="text" placeholder="Full Name" required>
-            <br><br>
 
-            <label for="AGE">AGE</label>
-            <br><br>
-            <input id="AGE" type="number" placeholder="Age" required>
-            <br><br>
+<div id="box">
+    <form id="myF">
+        <label for="name">Full Name</label>
+        <input id="name" type="text" placeholder="Full Name" required>
 
-            <label for="SEX">SEX</label>
-            <br><br>
-            <input id="SEX" type="text" placeholder="M/F" required>
-            <br><br>
+        <label for="AGE">Age</label>
+        <input id="AGE" type="number" min="1" max="120" placeholder="Age" required>
 
-            <label for="NATIONALITY">NATIONALITY</label>
-            <br><br>
-            <input id="NATIONALITY" type="text" placeholder="NATIONALITY" required>
-            <br><br>
+        <label>Sex</label>
+        <div class="radio-group">
+            <label><input type="radio" name="SEX" value="M" required> M</label>
+            <label><input type="radio" name="SEX" value="F" required> F</label>
+        </div>
 
-            <label for="EP">EP</label>
-            <br><br>
-            <input id="EP" type="text" placeholder="EP" required>
-            <br><br>
+        <label for="NATIONALITY">Nationality</label>
+        <select id="NATIONALITY" required>
+            <option value="">-- Select --</option>
+            <option value="Ethiopia">Ethiopia</option>
+            <option value="Eritrea">Eritrea</option>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+            <option value="Germany">Germany</option>
+            <option value="Canada">Canada</option>
+            <option value="India">India</option>
+            <option value="China">China</option>
+            <option value="Other">Other</option>
+        </select>
 
-            <label for="img">IMPORT IMAGE</label>
-            <br><br>
-            <input id="img" type="file" accept="image/*" required>
-            <br><br>
+        <label for="EP">EP</label>
+        <input id="EP" type="text" placeholder="EP" required>
 
-            <label for="acc">ACCEPTANCE</label>
-            <br><br>
-            <input id="acc" type="text" placeholder="ACCEPTED/DECLINED" required>
-            <br><br><br>
+        <label for="img">Import Image</label>
+        <input id="img" type="file" accept="image/*" required>
 
-            <input id="submit" type="submit">
-            <br><br>
-        </form>
-    </div>
-    <br><br><br>
+        <label for="acc">Acceptance</label>
+        <select id="acc" required>
+            <option value="">-- Select --</option>
+            <option value="Accepted">Accepted</option>
+            <option value="Declined">Declined</option>
+        </select>
 
-    <!-- Table of stored entries -->
-    <h2 style="text-align:center;">Stored Entries</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Image</th>
-                <th>Full Name</th>
-                <th>Age</th>
-                <th>Sex</th>
-                <th>Nationality</th>
-                <th>EP</th>
-                <th>Acceptance</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody id="entriesBody"></tbody>
-    </table>
+        <input id="submit" type="submit" value="Save Entry">
+    </form>
+</div>
 
-    <script>
-        // Existing form save logic
-        document.getElementById("myF").addEventListener("submit", function (e) {
-            e.preventDefault();
+<h2 style="text-align:center;">Stored Entries</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Full Name</th>
+            <th>Age</th>
+            <th>Sex</th>
+            <th>Nationality</th>
+            <th>EP</th>
+            <th>Acceptance</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody id="entriesBody"></tbody>
+</table>
 
-            let reader = new FileReader();
-            let file = document.getElementById("img").files[0];
+<script>
+    // Form save logic (unchanged)
+    document.getElementById("myF").addEventListener("submit", function (e) {
+        e.preventDefault();
 
-            reader.onloadend = function () {
-                let newEntry = {
-                    name: document.getElementById("name").value,
-                    age: document.getElementById("AGE").value,
-                    sex: document.getElementById("SEX").value,
-                    nationality: document.getElementById("NATIONALITY").value,
-                    ep: document.getElementById("EP").value,
-                    acc: document.getElementById("acc").value,
-                    img: reader.result
-                };
+        let reader = new FileReader();
+        let file = document.getElementById("img").files[0];
+        let sex = document.querySelector('input[name="SEX"]:checked').value;
 
-                let stored = JSON.parse(localStorage.getItem("entries")) || [];
-                stored.push(newEntry);
-                localStorage.setItem("entries", JSON.stringify(stored));
-
-                alert("Data saved!");
-                document.getElementById("myF").reset();
-                renderEntries();
+        reader.onloadend = function () {
+            let newEntry = {
+                name: document.getElementById("name").value,
+                age: document.getElementById("AGE").value,
+                sex: sex,
+                nationality: document.getElementById("NATIONALITY").value,
+                ep: document.getElementById("EP").value,
+                acc: document.getElementById("acc").value,
+                img: reader.result
             };
 
-            if (file) {
-                reader.readAsDataURL(file);
-            }
+            let stored = JSON.parse(localStorage.getItem("entries")) || [];
+            stored.push(newEntry);
+            localStorage.setItem("entries", JSON.stringify(stored));
+
+            alert("Data saved!");
+            document.getElementById("myF").reset();
+            renderEntries();
+        };
+
+        if (file) reader.readAsDataURL(file);
+    });
+
+    let entries = JSON.parse(localStorage.getItem("entries")) || [];
+    const entriesBody = document.getElementById("entriesBody");
+
+    function renderEntries() {
+        entries = JSON.parse(localStorage.getItem("entries")) || [];
+        entriesBody.innerHTML = "";
+        entries.forEach((entry, index) => {
+            let row = document.createElement("tr");
+            row.innerHTML = `
+                <td><img src="${entry.img}" alt="photo"></td>
+                <td>${entry.name}</td>
+                <td>${entry.age}</td>
+                <td>${entry.sex}</td>
+                <td>${entry.nationality}</td>
+                <td>${entry.ep}</td>
+                <td>${entry.acc}</td>
+                <td>
+                    <button class="edit-btn" onclick="editEntry(${index})">Edit</button>
+                    <button class="delete-btn" onclick="deleteEntry(${index})">Delete</button>
+                </td>
+            `;
+            entriesBody.appendChild(row);
         });
+    }
 
-        // Display stored entries with edit/delete
-        let entries = JSON.parse(localStorage.getItem("entries")) || [];
-        const entriesBody = document.getElementById("entriesBody");
-
-        function renderEntries() {
-            entries = JSON.parse(localStorage.getItem("entries")) || [];
-            entriesBody.innerHTML = "";
-            entries.forEach((entry, index) => {
-                let row = document.createElement("tr");
-                row.innerHTML = `
-                    <td><img src="${entry.img}" alt="photo"></td>
-                    <td>${entry.name}</td>
-                    <td>${entry.age}</td>
-                    <td>${entry.sex}</td>
-                    <td>${entry.nationality}</td>
-                    <td>${entry.ep}</td>
-                    <td>${entry.acc}</td>
-                    <td>
-                        <button class="edit-btn" onclick="editEntry(${index})">Edit</button>
-                        <button class="delete-btn" onclick="deleteEntry(${index})">Delete</button>
-                    </td>
-                `;
-                entriesBody.appendChild(row);
-            });
-        }
-
-        function deleteEntry(index) {
-            if (confirm("Are you sure you want to delete this entry?")) {
-                entries.splice(index, 1);
-                localStorage.setItem("entries", JSON.stringify(entries));
-                renderEntries();
-            }
-        }
-
-        function editEntry(index) {
-            let entry = entries[index];
-            let newName = prompt("Edit Name:", entry.name);
-            if (newName === null) return;
-            let newAge = prompt("Edit Age:", entry.age);
-            if (newAge === null) return;
-            let newSex = prompt("Edit Sex:", entry.sex);
-            if (newSex === null) return;
-            let newNationality = prompt("Edit Nationality:", entry.nationality);
-            if (newNationality === null) return;
-            let newEp = prompt("Edit EP:", entry.ep);
-            if (newEp === null) return;
-            let newAcc = prompt("Edit Acceptance:", entry.acc);
-            if (newAcc === null) return;
-
-            entry.name = newName;
-            entry.age = newAge;
-            entry.sex = newSex;
-            entry.nationality = newNationality;
-            entry.ep = newEp;
-            entry.acc = newAcc;
-
+    function deleteEntry(index) {
+        if (confirm("Are you sure you want to delete this entry?")) {
+            entries.splice(index, 1);
             localStorage.setItem("entries", JSON.stringify(entries));
             renderEntries();
         }
+    }
 
+    function editEntry(index) {
+        let entry = entries[index];
+        let newName = prompt("Edit Name:", entry.name);
+        if (newName === null) return;
+        let newAge = prompt("Edit Age:", entry.age);
+        if (newAge === null) return;
+        let newSex = prompt("Edit Sex (M/F):", entry.sex);
+        if (newSex === null) return;
+        let newNationality = prompt("Edit Nationality:", entry.nationality);
+        if (newNationality === null) return;
+        let newEp = prompt("Edit EP:", entry.ep);
+        if (newEp === null) return;
+        let newAcc = prompt("Edit Acceptance (Accepted/Declined):", entry.acc);
+        if (newAcc === null) return;
+
+        entry.name = newName;
+        entry.age = newAge;
+        entry.sex = newSex;
+        entry.nationality = newNationality;
+        entry.ep = newEp;
+        entry.acc = newAcc;
+
+        localStorage.setItem("entries", JSON.stringify(entries));
         renderEntries();
-    </script>
+    }
+
+    renderEntries();
+</script>
 </body>
 </html>
